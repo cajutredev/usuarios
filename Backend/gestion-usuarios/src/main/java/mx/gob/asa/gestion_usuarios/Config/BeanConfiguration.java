@@ -36,8 +36,7 @@ public class BeanConfiguration {
                 mapper.skip(Usuario::setPasswordHash);
                 mapper.skip(Usuario::setDepartamento);
                 mapper.skip(Usuario::setRol);
-                
             }).implicitMappings();
-            return modelMapper;
+        return modelMapper;
     }
 }

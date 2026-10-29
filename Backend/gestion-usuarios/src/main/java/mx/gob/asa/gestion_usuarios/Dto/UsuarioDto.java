@@ -17,4 +17,6 @@ public class UsuarioDto {
     private String telefono;
     private LocalDate fechaNacimiento;
     private Boolean activo;
+    private Long departamentoId;
+    private Long rolId;
 }

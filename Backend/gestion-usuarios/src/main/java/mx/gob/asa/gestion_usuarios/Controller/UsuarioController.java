@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import lombok.AllArgsConstructor;
+import mx.gob.asa.gestion_usuarios.Dto.UsuarioDto;
 import mx.gob.asa.gestion_usuarios.Model.Usuario;
 import mx.gob.asa.gestion_usuarios.Service.UsuarioService;
 
@@ -34,10 +35,11 @@ public class UsuarioController {
     }
 
     @PostMapping
-    public ResponseEntity<Usuario> save(
-        @RequestBody Usuario usuario) {
+    public ResponseEntity<UsuarioDto> save(
+        @RequestBody UsuarioDto usuarioDto) {
             
-        usuarioService.save(usuario);
-        return new ResponseEntity<>(HttpStatus.CREATED);
+        return new ResponseEntity<>(
+            usuarioService.save(usuarioDto),
+            HttpStatus.CREATED);
     }
 }

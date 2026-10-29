@@ -1,6 +1,10 @@
+C:\CursoFullStackApi\Backend\gestion-usuarios\src\main\java\mx\gob\asa\gestion_usuarios\Config\BeanConfiguration.java
 C:\CursoFullStackApi\Backend\gestion-usuarios\src\main\java\mx\gob\asa\gestion_usuarios\Controller\DepartamentoController.java
 C:\CursoFullStackApi\Backend\gestion-usuarios\src\main\java\mx\gob\asa\gestion_usuarios\Controller\RolController.java
 C:\CursoFullStackApi\Backend\gestion-usuarios\src\main\java\mx\gob\asa\gestion_usuarios\Controller\UsuarioController.java
+C:\CursoFullStackApi\Backend\gestion-usuarios\src\main\java\mx\gob\asa\gestion_usuarios\Dto\DepartamentoDto.java
+C:\CursoFullStackApi\Backend\gestion-usuarios\src\main\java\mx\gob\asa\gestion_usuarios\Dto\RolDto.java
+C:\CursoFullStackApi\Backend\gestion-usuarios\src\main\java\mx\gob\asa\gestion_usuarios\Dto\UsuarioDto.java
 C:\CursoFullStackApi\Backend\gestion-usuarios\src\main\java\mx\gob\asa\gestion_usuarios\GestionUsuariosApplication.java
 C:\CursoFullStackApi\Backend\gestion-usuarios\src\main\java\mx\gob\asa\gestion_usuarios\Model\Departamento.java
 C:\CursoFullStackApi\Backend\gestion-usuarios\src\main\java\mx\gob\asa\gestion_usuarios\Model\Rol.java

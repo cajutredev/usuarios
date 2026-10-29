@@ -1,13 +1,17 @@
+mx\gob\asa\gestion_usuarios\Dto\UsuarioDto.class
 mx\gob\asa\gestion_usuarios\Repository\UsuarioRepository.class
 mx\gob\asa\gestion_usuarios\Model\Usuario.class
 mx\gob\asa\gestion_usuarios\Repository\DepartamentoRepository.class
 mx\gob\asa\gestion_usuarios\Service\DepartamentoService.class
 mx\gob\asa\gestion_usuarios\Repository\RolRepository.class
 mx\gob\asa\gestion_usuarios\Controller\UsuarioController.class
+mx\gob\asa\gestion_usuarios\Dto\RolDto.class
+mx\gob\asa\gestion_usuarios\Config\BeanConfiguration.class
 mx\gob\asa\gestion_usuarios\Service\UsuarioService.class
 mx\gob\asa\gestion_usuarios\GestionUsuariosApplication.class
 mx\gob\asa\gestion_usuarios\Model\Departamento.class
 mx\gob\asa\gestion_usuarios\Service\UsuarioServiceImpl.class
+mx\gob\asa\gestion_usuarios\Dto\DepartamentoDto.class
 mx\gob\asa\gestion_usuarios\ServletInitializer.class
 mx\gob\asa\gestion_usuarios\Service\RolServiceImpl.class
 mx\gob\asa\gestion_usuarios\Model\Rol.class
