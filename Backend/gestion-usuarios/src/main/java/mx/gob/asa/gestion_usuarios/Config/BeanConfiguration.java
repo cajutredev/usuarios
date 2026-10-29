@@ -1,6 +1,7 @@
 package mx.gob.asa.gestion_usuarios.Config;
 
 import org.modelmapper.ModelMapper;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import mx.gob.asa.gestion_usuarios.Dto.DepartamentoDto;
@@ -13,6 +14,8 @@ import mx.gob.asa.gestion_usuarios.Model.Usuario;
 @Configuration 
 public class BeanConfiguration {
 
+    @Bean 
+    @SuppressWarnings({"all","null"})
     public ModelMapper modelMapper() {
 
         ModelMapper modelMapper = new ModelMapper();
