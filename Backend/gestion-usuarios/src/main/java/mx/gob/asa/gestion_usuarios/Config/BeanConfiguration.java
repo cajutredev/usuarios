@@ -10,9 +10,14 @@ import mx.gob.asa.gestion_usuarios.Dto.UsuarioDto;
 import mx.gob.asa.gestion_usuarios.Model.Departamento;
 import mx.gob.asa.gestion_usuarios.Model.Rol;
 import mx.gob.asa.gestion_usuarios.Model.Usuario;
+import mx.gob.asa.gestion_usuarios.Pagination.PageResponse;
 
 @Configuration 
 public class BeanConfiguration {
+    @Bean 
+    public <T> PageResponse<T> pageResponse() {
+        return new PageResponse<>();
+    }
 
     @Bean 
     @SuppressWarnings({"all","null"})
