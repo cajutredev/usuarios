@@ -14,64 +14,8 @@ type UserModalProps = {
     dataCatalogs: CatalogosProps
 }
 
-export default function UserModal({ 
-    onClose, 
-    saveMutation, 
-    editMutation,
-    selectedUserId,
-    dataCatalogs
-    }: UserModalProps) {
+export default function UserModal() {
 
-    const { data } = useQuery({
-        queryKey: ["edit", selectedUserId],
-        queryFn: () => getUserById(selectedUserId!),
-        enabled: selectedUserId !== undefined
-    })
-
-    const initialValues: UserFormType = {
-        "id": 0,
-        "nombre": "",
-        "primerApellido": "",
-        "segundoApellido": "",
-        "email": "",
-        "password": "",
-        "telefono": "",
-        "fechaNacimiento": "",
-        "activo": true,
-        "departamentoId": 1,
-        "rolId": 2
-    }
-    const { register, handleSubmit, reset, formState: { errors } } = useForm<UserFormType>({
-        defaultValues: initialValues
-    })
-
-    const handleForm = async (dataForm: UserFormType) => {
-        if (dataForm.id !== 0) {
-            await editMutation.mutateAsync(dataForm)
-        } else {
-            await saveMutation.mutateAsync(dataForm)
-        }
-    }
-
-    const { roles, departamentos } = dataCatalogs;
-    
-    useEffect(() => {
-        if (data) {
-            reset({
-                id: data.id,
-                nombre: data.nombre,
-                primerApellido: data.primerApellido,
-                segundoApellido: data.segundoApellido ?? "",
-                email: data.email,
-                password: "",
-                telefono: data.telefono ?? "",
-                fechaNacimiento: data.fechaNacimiento ?? "",
-                activo: data.activo,
-                departamentoId: data.departamentoId,
-                rolId: data.rolId,
-            })
-        }
-    }, [data, reset])
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center overflow-y-auto bg-gray-900/50 p-4">
             <section
@@ -82,7 +26,7 @@ export default function UserModal({
             >
                 <form
                     className="flex min-h-0 flex-col"
-                    onSubmit={handleSubmit(handleForm)}
+                    onSubmit=""
                     noValidate>
                     <header className="flex shrink-0 items-start justify-between border-b border-gray-200 px-6 py-5">
                         <div>
@@ -99,7 +43,7 @@ export default function UserModal({
                         <button
                             aria-label="Cerrar"
                             className="rounded-md p-2 text-gray-400 transition hover:bg-gray-100 hover:text-gray-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                            onClick={onClose}
+                            onClick=""
                             type="button"
                         >
                             <span aria-hidden="true" className="text-2xl leading-none">
@@ -110,19 +54,14 @@ export default function UserModal({
 
                     <div className="min-h-0 overflow-y-auto overscroll-contain">
                         <div className="px-6 py-6">
-                            <UserForm
-                                register={register}
-                                errors={errors}
-                                roles={roles}
-                                departamentos={departamentos}
-                            />
+                            UserForm
                         </div>
                     </div>
 
                     <footer className="flex shrink-0 justify-end gap-3 border-t border-gray-200 px-6 py-4">
                         <button
                             className="rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-semibold text-gray-700 shadow-sm transition hover:bg-gray-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                            onClick={onClose}
+                            onClick=""
                             type="button"
                         >
                             Cancelar
