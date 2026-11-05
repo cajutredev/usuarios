@@ -8,7 +8,7 @@ type UserFormProps = {
     roles: Rol[]
     departamentos: Departamento[]
 }
-export default function UserForm({errors, register, roles, departamentos}: UserFormProps) {
+export default function UserForm() {
     return (
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
             <div>
@@ -27,16 +27,8 @@ export default function UserForm({errors, register, roles, departamentos}: UserF
                     type="text"
                     aria-invalid={Boolean(errors.nombre)}
                     aria-describedby={errors.nombre ? "nombre-error" : undefined}
-                    {...register("nombre", {
-                        required: "El nombre es obligatorio.",
-                        maxLength: { value: 64, message: "El nombre no puede exceder 64 caracteres." },
-                    })}
                 />
-                {errors.nombre && (
-                    <div id="nombre-error">
-                        <ErrorMessage>{errors.nombre.message}</ErrorMessage>
-                    </div>
-                )}
+                    Errores
             </div>
 
             <div>
@@ -55,16 +47,7 @@ export default function UserForm({errors, register, roles, departamentos}: UserF
                     type="text"
                     aria-invalid={Boolean(errors.primerApellido)}
                     aria-describedby={errors.primerApellido ? "primerApellido-error" : undefined}
-                    {...register("primerApellido", {
-                        required: "El primer apellido es obligatorio.",
-                        maxLength: { value: 100, message: "El primer apellido no puede exceder 100 caracteres." },
-                    })}
                 />
-                {errors.primerApellido && (
-                    <div id="primerApellido-error">
-                        <ErrorMessage>{errors.primerApellido.message}</ErrorMessage>
-                    </div>
-                )}
             </div>
 
             <div>
